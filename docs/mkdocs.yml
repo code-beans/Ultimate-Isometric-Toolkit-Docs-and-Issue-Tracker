@@ -1,0 +1,23 @@
+site_name: Ultimate Isometric Toolkit Documentation
+
+theme:
+  name: 'readthedocs'
+  language: 'en'
+  feature:
+    tabs: true
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - toc:
+      permalink: true
+
+nav:
+  - 'Introduction': 'index.md'
+  - 'Getting Started': 'Manual/GettingStarted.md'
+  - 'Isometric Shader': 'Manual/Instancing.md'
+  - 'Physics': 'Manual/Physics.md'
+  - 'Snapping Tool' : 'Manual/SnappingTool.md'
+  - 'FAQs': 'Manual/FAQ.md'
