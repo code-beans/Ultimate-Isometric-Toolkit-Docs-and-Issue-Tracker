@@ -2,7 +2,7 @@
 
 A lightweight editor extension for Unity to create isometric games using 2d sprites.
 
-![UIT](../Manual/images/world.png)
+![UIT](./Manual/images/world.png)
 
 ## Features
 

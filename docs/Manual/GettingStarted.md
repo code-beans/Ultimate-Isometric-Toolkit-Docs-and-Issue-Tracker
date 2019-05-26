@@ -17,7 +17,7 @@ All that is required to set up your sprites for this toolkit is to use a custom 
 !!! note "Task"
     On the SpriteRenderer component replace the _Sprites-Default_ material with the _IsometricInstancingMaterial_ that can be found under _Assets/UltimateIsometricToolkit/Materials/_ and confirm the _Projection_ is set to _Isometric_ in the material settings. The _Enable GPU Instancing_ flag should be checked as well.
 
-![Shader](../images/shader.png)
+![Shader](./images/shader.png)
 
 You may duplicate the material, create multiple different ones, etc. Just make sure that the _IsometricInstancingUnlit_ shader is used to render your sprites.
 
@@ -28,14 +28,14 @@ You will notice a slight rotation in the sprite. Go to *Tools/UIT/Toggle SceneVi
 !!! note "Info"
     Scene view rotations in isometric perspective are disabled, indicated by the lock in the top right corner
 
-![SceneView Gizmo](../images/gizmo.png)
+![SceneView Gizmo](./images/gizmo.png)
 
 ## Projection
 
 Although this asset is called the _Ultimate Isometric Toolkit_  it allows to use other non-isometric projections. You can select the projection under
 *Tools/UIT/Projection/*. The correct projection depends solely on the sprites you use. This asset comes with a set of sprites in isometric perspective. You will know you chose the right projection, if the edges of your sprite align with the grid in the SceneView. This setting is important when using custom sprites.
 
-![Projection](../images/projection.png)
+![Projection](./images/projection.png)
 
 You can now add new sprites to your scene and start with your level design.     
 Check out [kenney's website](https://kenney.nl/assets?q=isometric) for custom, public domain isometric sprites. Most of the sprites offered through his website use a _dimetric_ projection.

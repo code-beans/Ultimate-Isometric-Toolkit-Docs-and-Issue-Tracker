@@ -7,7 +7,7 @@ You can add the regular `Rigidbody` & `Collider` components to your GameObject.
 
 When adding the `Rigidbody` component make sure to check the _freeze rotation_ checkboxes in the inspector view.
 
-![Shader](../images/freezeRotation.png)
+![Shader](./images/freezeRotation.png)
 
 You may also set these values from script 
 
