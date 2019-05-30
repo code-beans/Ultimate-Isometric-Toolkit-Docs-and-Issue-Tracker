@@ -8,7 +8,7 @@ Yes. If you are looking for custom sprites [Kenney](https://kenney.nl/assets?q=i
 
 As far as we have tested all of Unity's target platforms are compatible.   
 However the target platform must support GPU instancing (i.e.WebGL 2.0, OpenGL es 3.0+ or DirectX 11+).
-To read more on this have a look at the [Instancing](/Instancing) section.
+To read more on this have a look at the [Instancing](/Manual/Instancing/) section.
 
 ## How many sprites can I use in a scene?
 
