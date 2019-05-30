@@ -19,5 +19,6 @@ nav:
   - 'Getting Started': 'Manual/GettingStarted.md'
   - 'Isometric Shader': 'Manual/Instancing.md'
   - 'Physics': 'Manual/Physics.md'
+  - 'Custom Sprites': 'Manual/CustomSprites.md'
   - 'Snapping Tool' : 'Manual/SnappingTool.md'
   - 'FAQs': 'Manual/FAQ.md'
