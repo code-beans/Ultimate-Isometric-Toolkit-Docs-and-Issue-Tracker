@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Custom Sprites - Ultimate Isometric Toolkit Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Custom Sprites";
+    var mkdocs_page_input_path = "Manual\\CustomSprites.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Ultimate Isometric Toolkit Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Introduction</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../GettingStarted/">Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Instancing/">Isometric Shader</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Physics/">Physics</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Custom Sprites</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#custom-sprites">Custom Sprites</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#import-settings">Import Settings</a></li>
+        
+            <li><a class="toctree-l3" href="#sorting-artifacts">Sorting Artifacts</a></li>
+        
+            <li><a class="toctree-l3" href="#order-in-layer">Order in layer</a></li>
+        
+            <li><a class="toctree-l3" href="#reduce-overlap">Reduce overlap</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SnappingTool/">Snapping Tool</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../FAQ/">FAQs</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Ultimate Isometric Toolkit Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Custom Sprites</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="custom-sprites">Custom Sprites<a class="headerlink" href="#custom-sprites" title="Permanent link">&para;</a></h1>
+<p>You can of course use custom sprites using this asset. However there is some work to be done before you can use them in your game. So let's walk you through the process using kenney's isometric prototype tiles freely available and under public domain (CC0) on his <a href="https://kenney.nl/assets/isometric-prototype-tiles">website</a>.</p>
+<p><img alt="Tile" src="../images/Sample.png" /></p>
+<div class="admonition task">
+<p class="admonition-title">Task</p>
+<p>Download the tiles and include them in your <em>Assets</em> folder</p>
+</div>
+<h2 id="import-settings">Import Settings<a class="headerlink" href="#import-settings" title="Permanent link">&para;</a></h2>
+<p>We have to set the pixels per unit value in the sprite's import settings so that each tile covers 1x1 units in the game. 
+Each tile is 256 px in width and sqrt(2) units in length. </p>
+<p><img alt="Tile" src="../images/tile.png" /></p>
+<p>That gives us <strong>256 px/sqrt(2) = 181.02 ppu</strong>    </p>
+<div class="admonition task">
+<p class="admonition-title">Task</p>
+<p>In the sprite's import settings set the pixels per unit value to 181.02 for all sprites</p>
+</div>
+<p><img alt="import settings" src="../images/spriteimportsettings.png" /></p>
+<p>This way each tile covers exactly 1x1 units</p>
+<p><img alt="2x2 floor" src="../images/tilefloor.png" /></p>
+<h2 id="sorting-artifacts">Sorting Artifacts<a class="headerlink" href="#sorting-artifacts" title="Permanent link">&para;</a></h2>
+<p>Sorting artifacts are visual 'glitches' that typically happen in 2.5D games when sprites simply cannot be rendered so that they create the pseudo 3d look. 
+These artifacts are unavoidable and a result of the fact that sprites do not have any depth information but can be minimized by careful consideration during level design. Consider the following example</p>
+<p><img alt="artifacts" src="../images/sorting_artifacts.png" /></p>
+<p>No order of the <em>floor</em>, <em>door</em> and <em>wall</em> tiles exists so that the scene 'looks right'. So let's clean this up</p>
+<h2 id="order-in-layer">Order in layer<a class="headerlink" href="#order-in-layer" title="Permanent link">&para;</a></h2>
+<p>During level design it's often clear that some tiles are rendered before any other tile. For example the floor from the image above will always be rendered before anything else. So we can put it behind anything else in the rendering queue by setting a lower <em>Order in Layer</em> value in the <code>SpriteRenderer</code> component.</p>
+<p><img alt="order in layer" src="../images/orderinlayer.png" /></p>
+<h2 id="reduce-overlap">Reduce overlap<a class="headerlink" href="#reduce-overlap" title="Permanent link">&para;</a></h2>
+<p>Sorting artifacts happen where sprites overlap. Reduce the amount of overlap and think about the logical order the sprites in your scene have to be rendered. 
+From the example above we want to draw the floor first, then the outer wall, and finally the door. So let's offset the wall by a bit.</p>
+<p><img alt="no artifacts" src="../images/sortingOrderCorrect.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../SnappingTool/" class="btn btn-neutral float-right" title="Snapping Tool">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Physics/" class="btn btn-neutral" title="Physics"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Physics/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../SnappingTool/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
